@@ -28,7 +28,7 @@ h1 {
     font-size: 42px;
     margin-bottom: 16px;
     text-align: center;
-    color: #6415FF;
+    color: #292929;
 }
 
 h2 {
@@ -73,6 +73,10 @@ NAV
     z-index: 1;
 } */
 
+#landing {
+    background-color: #58A4B0;
+}
+
 .nav__links {
     display: flex;
     align-items: center;
@@ -94,7 +98,7 @@ NAV
 .nav__link--anchor {
     text-decoration: none;
     font-size: 20px;
-    color: #6415FF;
+    color: #292929;
     font-weight: bold;
     padding: 8px;
 }
@@ -108,7 +112,7 @@ NAV
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 24px;
+    padding: 24px 0;
 }
 
 .nav__search--wrapper {
@@ -155,6 +159,7 @@ RESULTS
 #results {
     padding-top: 42px;
     max-width: 100vw;
+    background-color: #f6f6f7;
 }
 
 .results__header {
