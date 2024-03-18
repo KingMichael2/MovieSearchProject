@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/af475209fb.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="landing">
+      <nav>
+        <div class="nav__container">
+          <img class="logo" src="./assets/logo.jpeg" alt="" />
+          <ul class="nav__links">
+            <li class="nav__link">
+              <a href="#" class="nav__link--anchor">Home</a>
+            </li>
+            <li class="nav__link">
+              <a href="#" class="nav__link--anchor">Find A Movie</a>
+            </li>
+            <li class="nav__link">
+              <a href="#" class="nav__link--anchor no__cursor">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="nav__content">
+        <h1 class="nav__header">Browse our movies</h1>
+        <div class="nav__search--wrapper">
+          <input
+            class="nav__search"
+            type="text"
+            placeholder="Search by title or year"
+          />
+          <button class="btn"><i class="fas fa-magnifying-glass"></i></button>
+        </div>
+      </div>
+    </section>
+    <section id="results">
+      <div class="container">
+        <div class="row">
+          <div class="results__header">
+            <h2 class="results__title">Search results:</h2>
+            <select id="filter" onchange="filterMovies(event)">
+            <option value="" disabled selected>Sort</option>
+            <option value="OLD_TO_NEW">Date, Oldest to Newest</option>
+            <option value="NEW_TO_OLD">Date, Newest to Oldest</option>
+            </select>
+          </div>
+          <div class="movies">
+            <i class="fa-solid fa-spinner movies__loading--spinner"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="./index.js"></script>
+</html>
