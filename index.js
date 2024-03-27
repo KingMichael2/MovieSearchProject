@@ -1,8 +1,10 @@
-// https://www.omdbapi.com/?i=tt3896198&apikey=5c140bc1&
 const movieListEl = document.querySelector(".movies");
 
-async function main() {
-    const movies = await fetch("https://www.omdbapi.com/?i=tt3896198&apikey=5c140bc1&");
+
+async function main(searchTerm) {
+  var searchTerm = document.querySelector(".nav__search").value;
+
+    const movies = await fetch(`https://www.omdbapi.com/?s=${searchTerm}&apikey=5c140bc1&`);
     const moviesData = await movies.json();
     movieListEl.innerHTML = [moviesData].map((movie) => movieHTML(movie)).join("");
 }
