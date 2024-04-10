@@ -224,10 +224,6 @@ select {
     font-size: 18px;
 }
 
-.movie__genre {
-    font-size: 12px;
-}
-
 .movies__loading--spinner {
     display: none !important;
 }

@@ -1,54 +1,55 @@
-let movieResult;
-const form = document.querySelector("form");
+const moviesHTML = document.querySelector(".movies");
+const moviesInput = document.querySelector("input");
+const moviesBtn = document.querySelector("#movie__search--btn");
+const moviesForm = document.querySelector("#movies__form");
 
-form.addEventListener("submit", (event) => {
+async function fetchMovies(query) {
+  try {
+    const response = await fetch(
+      `https://www.omdbapi.com/?apikey=5c140bc1&s=${query}`
+  );
+    const movies = await response.json();
+    return movies.Search;
+  } catch (error) {
+    console.error("Error has occured", error);
+  }
+}
+
+let searchResult = "fast";
+function fetchUserInput(event) {
+  searchResult = event.target.value;
+}
+
+moviesForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  //stops the page from refreshing after entering input.
-  let searchTerm = form.querySelector("input").value;
-
-  getMovies(searchTerm);
+  //stops it refreshing page
+  moviesInput.addEventListener("input", fetchUserInput);
+  moviesBtn.addEventListener("click", main);
 });
 
-async function renderMovies() {
-  const movieList = document.querySelector(".movies");
-
-  movieList.classList += " movies__loading"
-
-  if (!movieResult) {
-    movieResult = await getMovies();
+async function main() {
+  try {
+    moviesHTML.classList.add("movies__loading");
+    const movies = await fetchMovies(searchResult);
+    moviesHTML.classList.remove("movies__loading");
+    moviesHTML.innerHTML = movies.map((movie) => movieHTML(movie)).join("");
+  } catch (error) {
+    console.error("Error fetching movies, please check spelling", error);
   }
-
-  movieList.classList.remove("movies__loading")
-
-  const moviesHTML = movieResult
-  .map((movie) => {
-      return `<div class="movie">
-<figure class="movie__img--wrapper">
-   <img class="movie__img" src="${movie.Poster}" alt="" />
-   </figure> 
-   <div class="movie__title">
-       ${movie.Title}
-   </div>
-   <div class="movie__year">
-     ${movie.Year}
-   </div>
-   <div class="movie__genre">
-     ${movie.Genre}
-   </div>
- </div>`;
-    })
-    .join("");
-
-  movieList.innerHTML = moviesHTML;
 }
 
-setTimeout(() => {
-  renderMovies();
-}, 1000);
-
-async function getMovies(searchTerm) {
-  const request = await fetch(
-    `https://www.omdbapi.com/?apikey=5c140bc1&s=${searchTerm}`);
-  const movies = await request.json();
-  console.log(movies);
+function movieHTML(movie) {
+  return `<div class="movie">
+  <figure class="movie__img--wrapper">
+     <img class="movie__img" src="${movie.Poster}" alt="" />
+     </figure> 
+     <div class="movie__title">
+         ${movie.Title}
+     </div>
+     <div class="movie__year">
+       ${movie.Year}
+     </div>
+   </div>`
 }
+
+main();
