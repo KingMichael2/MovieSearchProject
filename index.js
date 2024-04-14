@@ -3,7 +3,7 @@ const moviesInput = document.querySelector("input");
 const moviesBtn = document.querySelector("#movie__search--btn");
 const moviesForm = document.querySelector("#movies__form");
 
-async function fetchMovies(query) {
+async function fetchMovies(query, filter) {
   try {
     const response = await fetch(
       `https://www.omdbapi.com/?apikey=5c140bc1&s=${query}`
@@ -15,7 +15,7 @@ async function fetchMovies(query) {
   }
 }
 
-let searchResult = "fast";
+let searchResult = "Fast";
 function fetchUserInput(event) {
   searchResult = event.target.value;
 }

@@ -28,14 +28,14 @@ h1 {
     font-size: 42px;
     margin-bottom: 16px;
     text-align: center;
-    color: #292929;
+    color: #ffffff;
 }
 
 h2 {
     font-size: 32px;
     margin-bottom: 0;
     text-align: center;
-    color: #576154;
+    color: #ffffff;
 }
 
 li {
@@ -58,22 +58,8 @@ NAV
 
 */
 
-/* #landing::before {
-    background: url("assets/background_img.jpeg");
-    content: "";
-    position: absolute;
-    background-position: 50%;
-    background-size: cover;
-    background-attachment: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-} */
-
 #landing {
+    background-image: url(./assets/background__img.jpg);
     background-color: #58A4B0;
 }
 
@@ -85,7 +71,7 @@ NAV
 .nav__container {
     width: 100%;
     max-width: 1200px;
-    padding: 24px 24px;
+    padding: 24px 24px 62px 24px;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -98,7 +84,7 @@ NAV
 .nav__link--anchor {
     text-decoration: none;
     font-size: 20px;
-    color: #292929;
+    color: #ffffff;
     font-weight: bold;
     padding: 8px;
 }
@@ -112,7 +98,7 @@ NAV
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 24px 0;
+    padding: 24px 0 96px 0;
 }
 
 .nav__search--wrapper {
@@ -157,9 +143,8 @@ RESULTS
 */
 
 #results {
-    padding-top: 42px;
     max-width: 100vw;
-    background-color: #f6f6f7;
+    background-color: #292929;
 }
 
 .results__header {
@@ -188,7 +173,7 @@ select {
 }
 
 .movie {
-    width: 100%;
+    width: 25%;
     padding: 24px;
 }
 
@@ -206,6 +191,7 @@ select {
     transition: all 300ms ease;
     object-fit: contain;
     object-position: left;
+    border-radius: 25px;
 }
 
 .movie__img--wrapper {
@@ -218,10 +204,12 @@ select {
 .movie__title {
     font-size: 20px;
     margin-bottom: 8px;
+    color: #ffffff;
 }
 
 .movie__year {
-    font-size: 18px;
+    font-size: 16px;
+    color: #ffffff;
 }
 
 .movies__loading--spinner {
