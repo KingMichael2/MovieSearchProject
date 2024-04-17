@@ -23,7 +23,7 @@
               <a href="#" class="nav__link--anchor">Find A Movie</a>
             </li>
             <li class="nav__link">
-              <a href="#" class="nav__link--anchor no__cursor">Contact</a>
+              <a href="mailto:mkcruix2@aol.com" class="nav__link--anchor">Contact</a>
             </li>
           </ul>
         </div>
@@ -32,12 +32,14 @@
         <h1 class="nav__header">Browse our movies</h1>
         <div class="nav__search--wrapper">
           <form id="movies__form">
-          <input
-            class="nav__search"
-            type="text"
-            placeholder="Search by title or year"
-          />
-          <button id="movie__search--btn" class="btn"><i class="fas fa-magnifying-glass"></i></button>
+            <input
+              class="nav__search"
+              type="text"
+              placeholder="Search by title or year"
+            />
+            <button id="movie__search--btn" class="btn">
+              <i class="fas fa-magnifying-glass"></i>
+            </button>
           </form>
         </div>
       </div>
@@ -48,9 +50,9 @@
           <div class="results__header">
             <h2 class="results__title">Search results:</h2>
             <select id="filter" onchange="filterMovies(event)">
-            <option value="" disabled selected>Sort</option>
-            <option value="OLD_TO_NEW">Date, Oldest to Newest</option>
-            <option value="NEW_TO_OLD">Date, Newest to Oldest</option>
+              <option value="" disabled selected>Sort</option>
+              <option value="OLD_TO_NEW">Date, Oldest to Newest</option>
+              <option value="NEW_TO_OLD">Date, Newest to Oldest</option>
             </select>
           </div>
           <div class="movies">
@@ -59,6 +61,23 @@
         </div>
       </div>
     </section>
+    <footer>
+      <div class="container">
+        <div class="row row__column">
+          <a href="#">
+            <figure class="footer__logo">
+              <img src="./assets/logo.svg" class="footer__logo--img" alt="" />
+            </figure>
+          </a>
+          <div class="footer__list">
+            <a href="#" class="footer__link">Home</a>
+            <a href="#" class="footer__link">Search for Movies</a>
+            <a href="mailto:mkcruix2@aol.com" class="footer__link">Contact</a>
+          </div>
+          <div class="footer__copyright">Copyright &copy; MovieFind 2024</div>
+        </div>
+      </div>
+    </footer>
   </body>
   <script src="./index.js"></script>
 </html>
