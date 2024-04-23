@@ -321,10 +321,15 @@ DETAILS
 
 .movie__info {
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 300;
     color: #ffffff;
     text-align: center;
     padding: 8px 0;
+}
+
+.movie__info--anchor {
+    font-weight: 500;
+    color: #6415FF;
 }
 
 /* 

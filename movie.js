@@ -26,25 +26,25 @@ function movieInfoHTML(movie) {
                 ${movie.Title}
                 </div>
                 <p class="movie__info">
-                    Runtime: ${movie.Runtime}
+                <span class="movie__info--anchor">Runtime:</span> ${movie.Runtime}
                 </p>
                 <p class="movie__info">
-                PG Rating: ${movie.Rated}
+                <span class="movie__info--anchor">PG Rating:</span> ${movie.Rated}
                 </p>
                 <p class="movie__info">
-                Release Date: ${movie.Released}
+                <span class="movie__info--anchor">Release Date:</span> ${movie.Released}
                 </p>
                 <p class="movie__info">
-                Genre: ${movie.Genre}
+                <span class="movie__info--anchor">Genre:</span> ${movie.Genre}
                 </p>
                 <p class="movie__info">
-                Directed by: ${movie.Director}
+                <span class="movie__info--anchor">Directed by:</span> ${movie.Director}
                 </p>
                 <p class="movie__info">
-                Staring: ${movie.Actors}
+                <span class="movie__info--anchor">Staring:</span> ${movie.Actors}
                 </p>
                 <p class="movie__info">
-                Plot: ${movie.Plot}
+                <span class="movie__info--anchor">Plot:</span> ${movie.Plot}
                 </p>
             </div>`;
 }
