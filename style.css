@@ -279,9 +279,12 @@ DETAILS
 */
 
 .details__nav {
+    display: flex;
+    justify-content: space-around;
     background-image: url(./assets/background__img.jpg);
     background-color: #58A4B0;
     padding-bottom: 96px;
+    margin: 0 auto;
     width: 100%;
     max-width: 100vw;
 }
