@@ -8,7 +8,7 @@
       src="https://kit.fontawesome.com/af475209fb.js"
       crossorigin="anonymous"
     ></script>
-    <title>Document</title>
+    <title>MovieFind</title>
   </head>
   <body>
     <section id="landing">
@@ -17,13 +17,15 @@
           <img class="logo" src="./assets/logo.svg" alt="" />
           <ul class="nav__links">
             <li class="nav__link">
-              <a href="#" class="nav__link--anchor">Home</a>
+              <a href="#" class="nav__link nav__link--anchor">Home</a>
             </li>
             <li class="nav__link">
-              <a href="#" class="nav__link--anchor">Find A Movie</a>
+              <a href="#" class="nav__link nav__link--anchor">Search</a>
             </li>
             <li class="nav__link">
-              <a href="mailto:mkcruix2@aol.com" class="nav__link--anchor">Contact</a>
+              <a href="mailto:mkcruix2@aol.com" class="nav__link"
+                >Contact</a
+              >
             </li>
           </ul>
         </div>
@@ -55,8 +57,12 @@
               <option value="NEW_TO_OLD">Date, Newest to Oldest</option>
             </select>
           </div>
-          <div class="movies">
-            <i class="fa-solid fa-spinner movies__loading--spinner"></i>
+          <div class="container">
+            <div class="row">
+              <div class="movies">
+                <i class="fa-solid fa-spinner movies__loading--spinner"></i>
+              </div>
+            </div>
           </div>
         </div>
       </div>
