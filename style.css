@@ -70,6 +70,8 @@ NAV
     background-color: #58A4B0;
 }
 
+
+
 .nav__links {
     display: flex;
     align-items: center;
@@ -202,6 +204,7 @@ select {
 .movie {
     width: 25%;
     padding: 24px;
+    cursor: pointer;
 }
 
 .movies__loading {
@@ -244,6 +247,10 @@ select {
     color: #ffffff;
 }
 
+.movie__title:hover {   
+    text-decoration: underline;
+}
+
 .movies__loading--spinner {
     display: none !important;
 }
@@ -263,6 +270,61 @@ select {
     100% {
         transform: rotate(360deg);
     }
+}
+
+/*
+
+DETAILS
+
+*/
+
+.details__nav {
+    background-image: url(./assets/background__img.jpg);
+    background-color: #58A4B0;
+    padding-bottom: 96px;
+}
+
+#details {
+    background-color: #292929;
+    padding: 56px 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.movie__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 26px 96px 26px;
+}
+
+.movie__details--img {
+    max-height: 460px;
+    max-width: 100%;
+    object-fit: contain;
+    overflow: hidden;
+    object-position: left;
+    border-radius: 25px;
+}
+
+.movie__details--title {
+    font-size: 42px;
+    font-weight: 700;
+    background-color: darkgray;
+    padding: 12px;
+    border-radius: 10px;
+    color: #000000;
+    text-align: center;
+    margin: 8px 0;
+}
+
+.movie__info {
+    font-size: 24px;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+    padding: 8px 0;
 }
 
 /* 
@@ -331,6 +393,14 @@ footer {
     .nav__link {
         font-size: 18px;
     }
+
+    .movie__details--title {
+        font-size: 36px;
+    }
+
+    .movie__info {
+        font-size: 24px;
+    }
 }
 
 /*SMALL PHONES & LARGE PHONES */
@@ -341,5 +411,13 @@ footer {
 
     .movie {
         width: 100%;
+    }
+
+    .movie__details--title {
+        font-size: 32px;
+    }
+
+    .movie__info {
+        font-size: 18px;
     }
 }

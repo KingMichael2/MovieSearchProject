@@ -58,13 +58,12 @@ async function main(value) {
 }
 
 function showMovieDetails(imdbID) {
-  console.log(imdbID)
-  localStorage.setItem("id", imdbID)
+  localStorage.setItem("id", imdbID);
   window.location.href = `${window.location.origin}/movie.html`
 }
 
 function movieHTML(movie) {
-  return `<div class="movie" onclick="showMovieDetails(${movie.imdbID})">
+  return `<div class="movie" onclick="showMovieDetails('${movie.imdbID}')">
   <figure class="movie__img--wrapper">
      <img class="movie__img" src="${movie.Poster}" alt="" />
      </figure> 

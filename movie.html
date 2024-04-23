@@ -7,12 +7,40 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="movie__details">
-      <div class="movie__wrapper">
-        <div class="movie__details--title">Movie Title</div>
-        <p class="movie__details--year">2019</p>
-      </div>
+    <div class="details__nav nav__container">
+      <img class="logo" src="./assets/logo.svg" alt="" />
+      <ul class="nav__links">
+        <li class="nav__link">
+          <a href="./index.html" class="nav__link nav__link--anchor">Home</a>
+        </li>
+        <li class="nav__link">
+          <a href="./index.html" class="nav__link nav__link--anchor">Search</a>
+        </li>
+        <li class="nav__link">
+          <a href="mailto:mkcruix2@aol.com" class="nav__link">Contact</a>
+        </li>
+      </ul>
     </div>
+    <section id="details">
+      <div class="movie__details"></div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row row__column">
+          <a href="./index.html">
+            <figure class="footer__logo">
+              <img src="./assets/logo.svg" class="footer__logo--img" alt="" />
+            </figure>
+          </a>
+          <div class="footer__list">
+            <a href="./index.html" class="footer__link">Home</a>
+            <a href="./index.html" class="footer__link">Search for Movies</a>
+            <a href="mailto:mkcruix2@aol.com" class="footer__link">Contact</a>
+          </div>
+          <div class="footer__copyright">Copyright &copy; MovieFind 2024</div>
+        </div>
+      </div>
+    </footer>
   </body>
   <script src="./movie.js"></script>
 </html>
