@@ -24,12 +24,10 @@ function fetchUserInput(event) {
   searchResult = event.target.value;
 }
 
-moviesForm.addEventListener("submit", (event) => {
-  event.preventDefault();
+moviesForm.addEventListener("submit", (event) => event.preventDefault())
   //stops it refreshing page
   moviesInput.addEventListener("input", fetchUserInput);
   moviesBtn.addEventListener("click", main);
-});
 
 async function main(value) {
   try {
@@ -51,9 +49,13 @@ async function main(value) {
         .join("");
     } else {
       moviesHTML.innerHTML = movies.slice(0, 8).map((movie) => movieHTML(movie)).join("");
+      document.querySelector(".error__para").style.display = 'none';
     }
   } catch (error) {
     console.error("Error fetching movies, please check spelling", error);
+    if (error) {
+      document.querySelector(".error__para").style.display = 'block';
+    }
   }
 }
 

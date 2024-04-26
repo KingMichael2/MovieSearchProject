@@ -96,13 +96,9 @@ NAV
    
 }
 
-/* .nav__link--anchor {
-    text-decoration: none;
-    font-size: 20px;
-    color: #ffffff;
-    font-weight: bold;
-    padding: 8px;
-} */
+.nav__header {
+    padding-bottom: 20px;
+}
 
 .nav__link:hover,
 .nav__link--anchor:hover {
@@ -162,6 +158,13 @@ NAV
     bottom: 0;
     right: 0;
     padding: 0 20px 0 8px;
+}
+
+.error__para {
+    color: red;
+    font-weight: 700;
+    padding-bottom: 8px;
+    display: none;
 }
 
 
@@ -417,10 +420,6 @@ footer {
 @media (max-width: 550px) {
     .nav__link--anchor{
         display: none;
-    }
-
-    .movie {
-        width: 100%;
     }
 
     .movie__details--title {
